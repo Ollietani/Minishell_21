@@ -6,7 +6,7 @@
 /*   By: myael <myael@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 13:29:53 by senglish          #+#    #+#             */
-/*   Updated: 2021/12/02 20:54:28 by myael            ###   ########.fr       */
+/*   Updated: 2021/12/05 20:27:25 by myael            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	error(int num, char *str)
 	}
 	else if (num == 2)
 	{
-		printf("here\n");
 		ft_putstr_fd("minishell: ", 2);
 		ft_putstr_fd(str, 2);
 		ft_putstr_fd(": ", 2);

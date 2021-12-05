@@ -6,7 +6,7 @@
 /*   By: myael <myael@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:11:39 by myael             #+#    #+#             */
-/*   Updated: 2021/11/27 21:14:17 by myael            ###   ########.fr       */
+/*   Updated: 2021/12/05 20:26:49 by myael            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,11 @@ void	start_new_readline(t_list *data, int save, t_data *s)
 		ignore_signals();
 		wait(NULL);
 	}
-	close(s->in);
-	s->in = open(s->hr_name, O_RDONLY, 0644);
+	if (save == 1)
+	{
+		close(s->in);
+		s->in = open(s->hr_name, O_RDONLY, 0644);
+	}
 	main_signals_made();
 }
 
